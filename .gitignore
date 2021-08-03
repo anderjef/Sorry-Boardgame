@@ -136,3 +136,8 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
+
+#Pycharm (according to https://intellij-support.jetbrains.com/hc/en-us/articles/206544839 as of August 03, 2021)
+.idea/workspace.xml
+.idea/usage.statistics.xml
+.idea/shelf/
