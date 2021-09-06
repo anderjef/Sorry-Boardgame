@@ -848,9 +848,9 @@ def sorry_boardgame():  # returns zero on success and nonzero (some other intege
         if are_teams:
             can_sevens_be_split_across_more_than_two_pawns = get_user_confirmation("Can sevens be split across more than two pawns?")
 
-    draw_pile = ['1'] * 5 + ['2'] * 4 + ['3'] * 4 + ['4'] * 4 + ['5'] * 4 + ['7'] * 4 + ['8'] * 4 + ['10'] * 4 + ['11'] * 4 + ['12'] * 4 + ['Sorry'] * 4  # distribution collected from an owned version of the game  # must have more cards than hand_size * num_players to begin with (to be able to deal)
+    draw_pile = ['1'] * 5 + ['2'] * 4 + ['3'] * 4 + ['4'] * 4 + ['5'] * 4 + ['7'] * 4 + ['8'] * 4 + ['10'] * 4 + ['11'] * 4 + ['12'] * 4 + ['Sorry'] * 4  # distribution collected from an owned version of the game
     hand_size = None
-    while hand_size is None or not isinstance(hand_size, int) or hand_size < 0 or hand_size > len(draw_pile) / num_players:
+    while hand_size is None or not isinstance(hand_size, int) or hand_size < 0 or hand_size > len(draw_pile) / num_players:  # must have enough cards in the deck to deal
         hand_size = input("Hand size (default is 5): ")
         try:
             hand_size = int(hand_size)
